@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:mtr="http://schemas.android.com/apk/res-auto"
+              xmlns:gauge="http://schemas.android.com/apk/res-auto"
+              android:layout_width="fill_parent"
+              android:layout_height="fill_parent">
+
+
+    <com.example.arduino_serial.GaugeView
+        android:id="@+id/vgCadence"
+        android:layout_width="@dimen/gaugeLarge"
+        android:layout_height="@dimen/gaugeLarge"
+        gauge:showNeedle="true"
+        gauge:showRanges="true"
+        gauge:scaleEndValue="600"
+        gauge:scaleStartAngle="70"
+        gauge:divisions="10"
+        gauge:subdivisions="2"
+        gauge:showText="true"
+        gauge:textUnit="rpm"
+        android:layout_gravity="top"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="-50dp" />
+
+    <com.example.arduino_serial.GaugeView
+        android:id="@+id/vgSpeedo"
+        android:layout_width="@dimen/gaugeLarge"
+        android:layout_height="@dimen/gaugeLarge"
+        gauge:showNeedle="true"
+        gauge:showRanges="true"
+        gauge:scaleEndValue="60"
+        gauge:scaleStartAngle="70"
+        gauge:subdivisions="2"
+        gauge:showText="true"
+        gauge:textUnit="km/h"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="false"
+        android:layout_centerHorizontal="true"
+        android:layout_alignParentEnd="false" />
+
+    <com.example.arduino_serial.GaugeView
+        android:id="@+id/vgBattery"
+        android:layout_width="@dimen/gaugeSmall"
+        android:layout_height="@dimen/gaugeSmall"
+        gauge:showNeedle="true"
+        gauge:showRanges="true"
+        gauge:scaleEndValue="100"
+        gauge:scaleStartAngle="50"
+        gauge:showText="true"
+        android:layout_gravity="right|center_vertical"
+        gauge:textUnit="%"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true" />
+
+
+    <com.example.arduino_serial.GaugeView
+        android:id="@+id/vgThrottle"
+        android:layout_width="@dimen/gaugeSmall"
+        android:layout_height="@dimen/gaugeSmall"
+        gauge:showNeedle="true"
+        gauge:showRanges="true"
+        gauge:scaleEndValue="10"
+        gauge:showText="true"
+        gauge:scaleStartAngle="70"
+        android:layout_gravity="right|center_vertical"
+        gauge:textUnit="%"
+        gauge:divisions="5"
+        gauge:subdivisions="2"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true" />
+
+    <android.widget.TextClock
+        android:id="@+id/time"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:format24Hour="k:mm"
+        android:format12Hour="k:mm"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:textSize="40dp" />
+
+</RelativeLayout>
