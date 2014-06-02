@@ -5,4 +5,5 @@ A basic Android application to read serial input from a Tweensy 3.0 that is conn
 
 This is used to show readings from a Zoco Electric Bike
 
-Comming Bluetooth connection
+Comming:
+ Bluetooth connection
